@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/*!
+ * Marp Catppuccin theme.
+ * @theme catppuccin
+ * @author All-Purpose Mat. Based on Daniel Nicolas Gisolfi's Dracula theme
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+ 
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900|IBM+Plex+Sans:400,700");
+
+:root {
+  --catppuccin-background: #1e1e2e;
+  --catppuccin-current-line: #44475a;
+  --catppuccin-foreground: #cdd6f4;
+  --catppuccin-comment: #a6adc8;
+  --catppuccin-cyan: #74c7ec;
+  --catppuccin-green: #a6e3a1;
+  --catppuccin-orange: #fab387;
+  --catppuccin-pink: #f5c2e7;
+  --catppuccin-purple:#cba6f7;
+  --catppuccin-red: #f38ba8;
+  --catppuccin-yellow: #f9e2af;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: var(--catppuccin-background);
+}
+
+/* catppuccin Foreground */
+.hljs,
+.hljs-subst,
+.hljs-typing,
+.hljs-variable,
+.hljs-template-variable {
+    color: var(--catppuccin-foreground);
+}
+
+/* catppuccin Comment */
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+    color: var(--catppuccin-comment);
+}
+
+/* catppuccin Cyan */
+.hljs-meta .hljs-doctag,
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-link,
+.hljs-class {
+    color: var(--catppuccin-cyan);
+}
+
+
+/* catppuccin Green */
+.hljs-title {
+    color: var(--catppuccin-green);
+}
+
+/* catppuccin Orange */
+.hljs-params {
+    color: var(--catppuccin-orange);
+}
+
+/* catppuccin Pink */
+.hljs-keyword {
+    color: var(--catppuccin-pink);
+}
+
+/* catppuccin Purple */
+.hljs-literal,
+.hljs-number {
+    color: var(--catppuccin-purple);
+}
+
+/* catppuccin Red */
+.hljs-regexp {
+    color: var(--catppuccin-red);
+}
+
+/* catppuccin Yellow */
+.hljs-string,
+.hljs-name,
+.hljs-type,
+.hljs-attr,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-template-tag {
+    color: var(--catppuccin-yellow);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-params,
+.hljs-emphasis {
+ font-style: italic;
+}
+
+svg[data-marp-fitting=svg] {
+  max-height: 580px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0 0 0;
+  color: var(--catppuccin-pink);
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.9em;
+}
+
+p,
+blockquote {
+  margin: 1em 0 0 0;
+}
+
+ul > li,
+ol > li {
+  margin: 0.3em 0 0 0;
+  color:  var(--catppuccin-foreground);
+}
+ul > li > p,
+ol > li > p {
+  margin: 0.6em 0 0 0;
+}
+
+code {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8em;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
+  color: var(--catppuccin-green);
+}
+
+pre {
+  display: block;
+  margin: 1em 0 0 0;
+  min-height: 1em;
+  overflow: visible;
+}
+pre code {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 100%;
+  padding: 0.5em;
+  font-size: 0.7em;
+}
+pre code svg[data-marp-fitting=svg] {
+  max-height: calc(580px - 1em);
+}
+
+blockquote {
+  margin: 1em 0 0 0;
+  padding: 0 1em;
+  position: relative;
+  color: var(--catppuccin-orange);
+}
+blockquote::after, blockquote::before {
+  content: "“";
+  display: block;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  color: var(--catppuccin-green);
+}
+blockquote::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+blockquote::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+blockquote > *:first-child {
+  margin-top: 0;
+}
+
+mark {
+  background: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1em 0 0 0;
+}
+table th,
+table td {
+  padding: 0.2em 0.4em;
+  border-width: 1px;
+  border-style: solid;
+}
+
+section {
+  font-size: 35px;
+  font-family: "IBM Plex Sans";
+  line-height: 1.35;
+  letter-spacing: 1.25px;
+  padding: 70px;
+  color: var(--catppuccin-foreground);
+  background-color: var(--catppuccin-background);
+}
+section > *:first-child,
+section > header:first-child + * {
+  margin-top: 0;
+}
+section a,
+section mark {
+  color: var(--catppuccin-red);
+}
+section code {
+  background: var(--catppuccin-current-line);
+  color: var(--catppuccin-current-green);
+}
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+  color: var(--catppuccin-current-line);
+}
+section pre > code {
+  background: var(--catppuccin-current-line);
+}
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+  color: var(--catppuccin-comment);
+}
+section table th,
+section table td {
+  border-color:  var(--catppuccin-current-line);
+}
+section table thead th {
+  background: var(--catppuccin-current-line);
+  color: var(--catppuccin-yellow);
+}
+section table tbody > tr:nth-child(even) td,
+section table tbody > tr:nth-child(even) th {
+  background: var(--catppuccin-current-line);
+}
+
+header,
+footer,
+section::after {
+  box-sizing: border-box;
+  font-size: 66%;
+  height: 70px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 10px 25px;
+  position: absolute;
+  color: var(--catppuccin-comment);
+}
+
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section::after {
+  right: 0;
+  bottom: 0;
+  font-size: 80%;
+}
